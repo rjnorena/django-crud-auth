@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Task</title>
+</head>
+<body>
+{% block content %}
+    <main class="container">
+        <div class="row">
+            <div class="col-md-4 offset-md-4 mt-5">
+                <h1>Create Task</h1>
+                <form method="POST" class="card card-body">
+                    {% csrf_token %}
+                    {{form}}
+                    <p></p>
+                    <button class="btn btn-primary">
+                        Save
+                    </button>
+                </form>
+            </div>
+        </div>
+    </main>
+{% endblock %}
+
+
+</body>
+</html>

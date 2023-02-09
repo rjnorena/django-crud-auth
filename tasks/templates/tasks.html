@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tasks</title>
+</head>
+<body>
+{% block content %}
+    <main class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2 mt-5">
+                <h1>Tasks Pending</h1>
+                <ul class="list-group">
+
+                    {% for task in tasks %}
+                    <li class="list-group-item">
+                        <a href="{% url 'task_detail' task.id %}">
+                            <header class="d-flex justify-content-between">
+                               <h2> {{task.title}}</h2>
+                                <p>By: {{task.user.username}}</p>
+                            </header>
+                            {% if task.important %}
+                            <h4>This task is marked as important</h4>
+                            {% endif %}
+                            <h4>Description: {{task.description}}</h4>
+                        </a>
+                    </li>
+
+                    {% endfor %}
+
+                </ul>
+
+            </div>
+        </div>
+    </main>
+{% endblock %}
+
+</body>
+</html>

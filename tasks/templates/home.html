@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+{% block content %}
+<main class="container py-5">
+    <section class="card card-body">
+        <h1 class="display-1">Django Tasks Manager</h1>
+        <p></p>
+        <p>This app has the following:</p>
+        <p>-User creation and validation</p>
+        <p>-Login</p>
+        <p>-Task creation, view and listing</p>
+        <p>-Task update, complete and delete</p>
+        <p>-View of tasks pending and tasks completed</p>
+        <p> -Logout</p>
+        <p>-protected routes</p>
+        <p>-Bootstrap styling</p>
+        <p>-Deployment</p>
+        <p></p>
+        <p>*Feel free to play around!</p>
+        <p></p>
+
+        <p>By RJNORENA</p>
+        <p>rjnorena@gmail.com</p>
+        <div class="text-center">
+            <a class="btn btn-primary" href="/signin/">
+            SignIn
+        </a>
+            <a class="btn btn-primary" href="/signup/">
+            SignUp
+        </a>
+        </div>
+
+    </section>
+</main>
+{% endblock %}
+</body>
+</html>
